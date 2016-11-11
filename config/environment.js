@@ -6,22 +6,38 @@ module.exports = function(environment) {
     environment: environment,
     rootURL: '/',
     locationType: 'auto',
-    EmberENV: {
-      FEATURES: {
-        // Here you can enable experimental features on an ember canary build
-        // e.g. 'with-controller': true
-      },
-      EXTEND_PROTOTYPES: {
-        // Prevent Ember Data from overriding Date.parse.
-        Date: false
-      }
+  // ...
+    firebase: {
+      apiKey: 'AIzaSyDK6sYGhVsipuN9xLd9mZoZU8imr2onmz0',
+      authDomain: 'libraryapp-d5afb.firebaseapp.com',
+      databaseURL: 'https://libraryapp-d5afb.firebaseio.com',
+      storageBucket: 'libraryapp-d5afb.appspot.com',
+      messagingSenderId: "540001875129"
     },
 
-    APP: {
-      // Here you can pass flags/options to your application instance
-      // when it is created
-    }
-  };
+
+    // if using ember-cli-content-security-policy
+    contentSecurityPolicy: {
+      'script-src': "'self' 'unsafe-eval' apis.google.com",
+      'frame-src': "'self' https://*.firebaseapp.com",
+      'connect-src': "'self' wss://*.firebaseio.com https://*.googleapis.com"
+    },
+      EmberENV: {
+        FEATURES: {
+          // Here you can enable experimental features on an ember canary build
+          // e.g. 'with-controller': true
+        },
+        EXTEND_PROTOTYPES: {
+          // Prevent Ember Data from overriding Date.parse.
+          Date: false
+        }
+      },
+
+      APP: {
+        // Here you can pass flags/options to your application instance
+        // when it is created
+      }
+    };
 
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
