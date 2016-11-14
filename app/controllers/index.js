@@ -31,9 +31,9 @@ export default Ember.Controller.extend({
 				this.set('responseMessage', 'Thank you! we have saved your email address with the id:' + response.get('id'));
 				this.set('emailAddress', '');
 			});
-
-			
 		}
+
+		
 	}
 	
 });
