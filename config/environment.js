@@ -8,10 +8,10 @@ module.exports = function(environment) {
     locationType: 'auto',
   // ...
     firebase: {
-      apiKey: 'AIzaSyDK6sYGhVsipuN9xLd9mZoZU8imr2onmz0',
-      authDomain: 'libraryapp-d5afb.firebaseapp.com',
-      databaseURL: 'https://libraryapp-d5afb.firebaseio.com',
-      storageBucket: 'libraryapp-d5afb.appspot.com',
+      apiKey: "AIzaSyDK6sYGhVsipuN9xLd9mZoZU8imr2onmz0",
+      authDomain: "libraryapp-d5afb.firebaseapp.com",
+      databaseURL: "https://libraryapp-d5afb.firebaseio.com",
+      storageBucket: "libraryapp-d5afb.appspot.com",
       messagingSenderId: "540001875129"
     },
 

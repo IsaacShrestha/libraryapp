@@ -10,13 +10,15 @@ export default Ember.Controller.extend({
 	isDisabled: Ember.computed.not('isMessageEnoughLong'), //not able to validate more than one field
 
 	actions: {
-		receiveMessage: function(){
-			alert('Your message with e-mail address '+this.get('senderEmail')+' received');
+		saveMessage() {
+			const email = this.get('senderEmail');
+			const message = this.get('senderMessage');
+			const newMessage = this.store.createRecord('contact', {email: email , message: message});
+			newMessage.save();
 			this.set('responseMessage', 'Receieved message successfully with e-mail address '+this.get('senderEmail'));
 			this.set('senderEmail', '');
 			this.set('senderMessage', '');
 		}
 	}
-
 	
 });
