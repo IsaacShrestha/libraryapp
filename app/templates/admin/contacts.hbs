@@ -5,6 +5,8 @@
 		<tr>
 			<th>E-mail</th>
 			<th>Messages</th>
+			<th>Edit</th>
+			<th>Delete</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -12,6 +14,9 @@
 			<tr>
 				<td>{{contact.email}}</td>
 				<td>{{contact.message}}</td>
+				<td>{{#link-to 'admin.editcontacts' contact.id class="btn btn-success btn-xs"}}Edit{{/link-to}} </td>
+				<td><button class="btn btn-danger btn-xs" {{action 'deleteContact' contact}}>Delete</button>			
+				</td>
 			</tr>
 		{{/each}}
 	</tbody>
